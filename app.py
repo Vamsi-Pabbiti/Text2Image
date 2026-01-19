@@ -34,7 +34,7 @@ def index():
                     detailed_prompt, 
                     model="stabilityai/stable-diffusion-xl-base-1.0"
                 )
-s
+
                 filename = f"image_{datetime.now().strftime('%Y%m%d%H%M%S')}.png"
                 save_path = os.path.join(IMAGE_FOLDER, filename)
                 image.save(save_path)
