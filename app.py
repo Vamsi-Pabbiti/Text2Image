@@ -53,4 +53,4 @@ s
     return render_template("index.html", image_filename=image_filename, error=error)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
