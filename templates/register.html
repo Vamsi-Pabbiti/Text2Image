@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Sign Up{% endblock %}
+{% block content %}
+<div class="auth-page">
+    <div class="auth-card">
+        <h2>Create your account</h2>
+        <p class="auth-sub">Start generating for free</p>
+        <form method="POST">
+            <div class="field">
+                <label>Username</label>
+                <input type="text" name="username" required placeholder="coolcreator">
+            </div>
+            <div class="field">
+                <label>Email</label>
+                <input type="email" name="email" required placeholder="you@example.com">
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input type="password" name="password" required placeholder="Min 8 characters">
+            </div>
+            <div class="field">
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password" required placeholder="••••••••">
+            </div>
+            <button type="submit" class="btn-primary btn-full">Create Account</button>
+        </form>
+        <p class="auth-link">
+            Already have an account? <a href="{{ url_for('login') }}">Sign In</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

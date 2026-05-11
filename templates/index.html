@@ -1,41 +1,282 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>AI Image Generator</title>
-    <style>
-        body { font-family: sans-serif; background: #f0f2f5; text-align: center; padding: 50px; }
-        .container { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        textarea { width: 100%; height: 100px; padding: 10px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box; }
-        button { background: #007bff; color: white; border: none; padding: 12px 25px; border-radius: 8px; cursor: pointer; margin-top: 15px; font-weight: bold; width: 100%; }
-        .error { color: #721c24; background: #f8d7da; padding: 10px; border-radius: 5px; margin-top: 20px; border: 1px solid #f5c6cb; }
-        img { max-width: 100%; border-radius: 10px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        #loading-text { display: none; color: #666; margin-top: 15px; font-style: italic; }
-    </style>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}Create{% endblock %}
+{% block content %}
 
-<div class="container">
-    <h2>🚀 Free AI Image Generator</h2>
-    <form method="POST" onsubmit="document.getElementById('loading-text').style.display='block'">
-        <textarea name="prompt" placeholder="Describe what you want to see..."></textarea>
-        <button type="submit">Generate Image</button>
-    </form>
-
-    <p id="loading-text">✨ AI is thinking... this may take up to a minute...</p>
-
-    {% if error %}
-        <div class="error">{{ error }}</div>
-    {% endif %}
-
-    {% if image_filename %}
-        <h3>Result:</h3>
-        <img src="{{ url_for('static', filename='images/' + image_filename) }}">
-        <br>
-        <a href="{{ url_for('static', filename='images/' + image_filename) }}" download>
-            <button style="background: #28a745;">Download Image</button>
-        </a>
-    {% endif %}
+<div class="hero">
+    <h1>Turn words into <em>art</em></h1>
+    <p>Describe anything. AI brings it to life.</p>
 </div>
 
-</body>
-</html>
+<div class="studio">
+    <!-- Left: Controls -->
+    <aside class="controls">
+        <form id="generate-form">
+
+            <div class="field">
+                <label>Your Prompt</label>
+                <textarea id="prompt" name="prompt" rows="5"
+                    placeholder="A neon samurai standing in Tokyo rain, cinematic..."></textarea>
+                <div class="char-count"><span id="char-count">0</span>/1000</div>
+            </div>
+
+            <div class="examples">
+                <span class="label">Try:</span>
+                <button type="button" onclick="setPrompt('Majestic dragon soaring over snowy mountains at golden hour')">Dragon</button>
+                <button type="button" onclick="setPrompt('Cute red panda astronaut floating in space, Pixar style')">Panda</button>
+                <button type="button" onclick="setPrompt('Cyberpunk city at night, neon lights reflecting on wet streets')">Cyberpunk</button>
+            </div>
+
+            <div class="field">
+                <label>Model</label>
+                <select name="model">
+                    {% for m in models %}
+                    <option value="{{ m.id }}">{{ m.name }} — {{ m.desc }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <details class="advanced">
+                <summary>⚙ Advanced Options</summary>
+                <div class="advanced-grid">
+                    <div class="field">
+                        <label>Negative Prompt</label>
+                        <textarea name="negative_prompt" rows="2"
+                            placeholder="blurry, low quality, distorted..."></textarea>
+                    </div>
+                    <div class="field">
+                        <label>Aspect Ratio</label>
+                        <select name="aspect_ratio">
+                            <option value="square">Square (512×512)</option>
+                            <option value="landscape">Landscape (768×512)</option>
+                            <option value="portrait">Portrait (512×768)</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Steps <span id="steps-val" class="val">30</span></label>
+                        <input type="range" name="steps" min="20" max="50" value="30"
+                            oninput="document.getElementById('steps-val').textContent=this.value">
+                    </div>
+                    <div class="field">
+                        <label>Guidance <span id="guidance-val" class="val">7.5</span></label>
+                        <input type="range" name="guidance" min="1" max="20" step="0.5" value="7.5"
+                            oninput="document.getElementById('guidance-val').textContent=this.value">
+                    </div>
+                    <div class="field">
+                        <label>Seed (optional)</label>
+                        <input type="number" name="seed" placeholder="Leave empty for random">
+                    </div>
+                </div>
+            </details>
+
+            {% if current_user.is_authenticated %}
+                <button type="submit" id="generate-btn" class="btn-generate">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Generate
+                </button>
+            {% else %}
+                <a href="{{ url_for('register') }}" class="btn-generate">
+                    <i class="fa-solid fa-lock"></i> Sign Up to Generate
+                </a>
+            {% endif %}
+        </form>
+    </aside>
+
+    <!-- Right: Result -->
+    <section class="result-panel">
+        <div id="placeholder" class="placeholder">
+            <div class="placeholder-icon">🪄</div>
+            <h2>Your creation appears here</h2>
+            <p>Enter a prompt and click Generate</p>
+        </div>
+
+        <div id="result-section" class="hidden">
+            <div class="result-image-wrap">
+                <img id="main-image" alt="Generated image">
+                <div id="loading-overlay" class="loading-overlay hidden">
+                    <div class="spinner"></div>
+                    <p>Generating your image…<br>
+                    <small>May take 30–60 seconds on first run</small></p>
+                </div>
+            </div>
+            <div class="result-actions">
+                <a id="download-link" href="#" download class="btn-action btn-download">
+                    <i class="fa-solid fa-download"></i> Download
+                </a>
+                <button onclick="copyPrompt()" class="btn-action">
+                    <i class="fa-solid fa-copy"></i> Copy Prompt
+                </button>
+                <button id="fav-btn" onclick="toggleFavorite()" class="btn-action">
+                    <i class="fa-regular fa-heart"></i> Favorite
+                </button>
+            </div>
+            <p id="display-prompt" class="display-prompt"></p>
+        </div>
+    </section>
+</div>
+
+<!-- History -->
+<section class="history-section">
+    <h3><i class="fa-solid fa-clock-rotate-left"></i> Recent Creations</h3>
+    <div id="history-grid" class="history-grid">
+        {% for item in history %}
+        <div class="history-item"
+             data-id="{{ item.id }}"
+             data-filename="{{ item.filename }}"
+             data-prompt="{{ item.prompt }}"
+             data-url="{{ item.image_url }}"
+             data-favorite="{{ item.is_favorite }}">
+            <img src="{{ item.image_url }}" alt="{{ item.prompt }}" loading="lazy">
+            <div class="history-overlay">{{ item.prompt[:60] }}...</div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    let currentPrompt = "", currentImageId = null;
+
+    function setPrompt(text) {
+        document.getElementById("prompt").value = text;
+        updateCharCount();
+    }
+
+    function updateCharCount() {
+        document.getElementById("char-count").textContent =
+            document.getElementById("prompt").value.length;
+    }
+    document.getElementById("prompt")?.addEventListener("input", updateCharCount);
+
+    function copyPrompt() {
+        if (!currentPrompt) return;
+        navigator.clipboard.writeText(currentPrompt)
+            .then(() => showToast("Prompt copied!", "success"));
+    }
+
+    function toggleFavorite() {
+        if (!currentImageId) return;
+        fetch(`/image/${currentImageId}/favorite`, { method: "POST" })
+            .then(r => r.json())
+            .then(data => {
+                const btn = document.getElementById("fav-btn");
+                btn.innerHTML = data.is_favorite
+                    ? '<i class="fa-solid fa-heart"></i> Favorited'
+                    : '<i class="fa-regular fa-heart"></i> Favorite';
+                showToast(data.is_favorite
+                    ? "Added to favorites!" : "Removed from favorites", "success");
+            });
+    }
+
+    function showImage(imageData) {
+        currentPrompt  = imageData.prompt;
+        currentImageId = imageData.id;
+
+        const img = document.getElementById("main-image");
+        img.src = imageData.image_url;
+
+        document.getElementById("download-link").href     = imageData.image_url;
+        document.getElementById("download-link").download = imageData.filename;
+        document.getElementById("display-prompt").textContent = `"${imageData.prompt}"`;
+
+        document.getElementById("fav-btn").innerHTML = imageData.is_favorite
+            ? '<i class="fa-solid fa-heart"></i> Favorited'
+            : '<i class="fa-regular fa-heart"></i> Favorite';
+
+        document.getElementById("result-section").classList.remove("hidden");
+        document.getElementById("placeholder").classList.add("hidden");
+        document.getElementById("loading-overlay").classList.add("hidden");
+    }
+
+    function addToHistory(img) {
+        const grid = document.getElementById("history-grid");
+        const div  = document.createElement("div");
+        div.className        = "history-item";
+        div.dataset.id       = img.id;
+        div.dataset.filename = img.filename;
+        div.dataset.prompt   = img.prompt;
+        div.dataset.url      = img.image_url;
+        div.dataset.favorite = img.is_favorite;
+        div.innerHTML = `
+            <img src="${img.image_url}" alt="${img.prompt}" loading="lazy">
+            <div class="history-overlay">${img.prompt.slice(0,60)}...</div>`;
+        div.addEventListener("click", () => showImage(img));
+        grid.prepend(div);
+    }
+
+    function resetBtn() {
+        const btn = document.getElementById("generate-btn");
+        if (btn) {
+            btn.disabled  = false;
+            btn.innerHTML = '<i class="fa-solid fa-wand-magic-sparkles"></i> Generate';
+        }
+    }
+
+    function pollTask(taskId) {
+        const interval = setInterval(async () => {
+            try {
+                const res  = await fetch(`/task/${taskId}`);
+                const data = await res.json();
+
+                if (data.status === "done") {
+                    clearInterval(interval);
+                    showImage(data.image);
+                    addToHistory(data.image);
+                    resetBtn();
+                    showToast("Image generated! ✨", "success");
+
+                } else if (data.status === "error") {
+                    clearInterval(interval);
+                    document.getElementById("loading-overlay").classList.add("hidden");
+                    showToast(data.error || "Generation failed.", "error");
+                    resetBtn();
+                }
+                // pending/running → keep polling
+
+            } catch (err) {
+                clearInterval(interval);
+                showToast("Connection error. Please try again.", "error");
+                resetBtn();
+            }
+        }, 3000);
+    }
+
+    document.getElementById("generate-form")?.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const btn = document.getElementById("generate-btn");
+        btn.disabled  = true;
+        btn.innerHTML = '<span class="spinner-sm"></span> Starting...';
+
+        document.getElementById("loading-overlay").classList.remove("hidden");
+        document.getElementById("result-section").classList.remove("hidden");
+        document.getElementById("placeholder").classList.add("hidden");
+
+        const res  = await fetch("/generate", {
+            method: "POST",
+            body:   new FormData(e.target)
+        });
+        const data = await res.json();
+
+        if (data.error) {
+            showToast(data.error, "error");
+            document.getElementById("loading-overlay").classList.add("hidden");
+            resetBtn();
+        } else {
+            btn.innerHTML = '<span class="spinner-sm"></span> Generating...';
+            pollTask(data.task_id);
+        }
+    });
+
+    // Click history items
+    document.querySelectorAll(".history-item").forEach(item => {
+        item.addEventListener("click", () => showImage({
+            id:          item.dataset.id,
+            filename:    item.dataset.filename,
+            prompt:      item.dataset.prompt,
+            image_url:   item.dataset.url,
+            is_favorite: item.dataset.favorite === "True"
+        }));
+    });
+</script>
+{% endblock %}

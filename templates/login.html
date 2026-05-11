@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Sign In{% endblock %}
+{% block content %}
+<div class="auth-page">
+    <div class="auth-card">
+        <h2>Welcome back</h2>
+        <p class="auth-sub">Sign in to your VividAI account</p>
+        <form method="POST">
+            <div class="field">
+                <label>Email</label>
+                <input type="email" name="email" required placeholder="you@example.com">
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input type="password" name="password" required placeholder="••••••••">
+            </div>
+            <label class="checkbox-label">
+                <input type="checkbox" name="remember"> Remember me
+            </label>
+            <button type="submit" class="btn-primary btn-full">Sign In</button>
+        </form>
+        <p class="auth-link">
+            Don't have an account? <a href="{{ url_for('register') }}">Sign Up</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

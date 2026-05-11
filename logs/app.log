@@ -1,0 +1,511 @@
+2026-05-07 09:09:05,832 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.77:5000
+2026-05-07 09:09:05,833 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-05-07 09:09:14,030 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:09:14] "GET / HTTP/1.1" 200 -
+2026-05-07 09:09:14,337 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:09:14] "GET /static/css/main.css HTTP/1.1" 200 -
+2026-05-07 09:09:14,376 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:09:14] "GET /static/js/main.js HTTP/1.1" 200 -
+2026-05-07 09:09:26,126 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:09:26] "GET /register HTTP/1.1" 200 -
+2026-05-07 09:09:26,144 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:09:26] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-07 09:09:26,145 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:09:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-07 09:09:28,850 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:09:28] "GET /login HTTP/1.1" 200 -
+2026-05-07 09:09:28,864 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:09:28] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-07 09:09:28,870 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:09:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-07 09:09:38,890 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:09:38] "POST /login HTTP/1.1" 200 -
+2026-05-07 09:09:38,910 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:09:38] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-07 09:09:38,915 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:09:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-07 09:09:42,385 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:09:42] "GET /register HTTP/1.1" 200 -
+2026-05-07 09:09:42,401 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:09:42] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-07 09:09:42,403 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:09:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-07 09:09:56,133 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:09:56] "[32mPOST /register HTTP/1.1[0m" 302 -
+2026-05-07 09:09:56,167 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:09:56] "GET / HTTP/1.1" 200 -
+2026-05-07 09:09:56,203 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:09:56] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-07 09:09:56,205 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:09:56] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-07 09:10:09,612 [INFO] services: Requesting: https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0 | prompt: a man riding on a lion
+2026-05-07 09:10:09,612 [INFO] __main__: Task 0d506bdb-4938-495d-935a-a8ef1b4ccfc0 started for user 1
+2026-05-07 09:10:09,615 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:10:09] "POST /generate HTTP/1.1" 200 -
+2026-05-07 09:10:09,626 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): api-inference.huggingface.co:443
+2026-05-07 09:10:10,238 [DEBUG] urllib3.connectionpool: https://api-inference.huggingface.co:443 "POST /models/stabilityai/stable-diffusion-xl-base-1.0 HTTP/1.1" 404 187
+2026-05-07 09:10:10,240 [ERROR] __main__: Task 0d506bdb-4938-495d-935a-a8ef1b4ccfc0 failed: Model 'stabilityai/stable-diffusion-xl-base-1.0' not found on Hugging Face.
+2026-05-07 09:10:12,638 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:10:12] "GET /task/0d506bdb-4938-495d-935a-a8ef1b4ccfc0 HTTP/1.1" 200 -
+2026-05-07 09:10:22,919 [INFO] services: Requesting: https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0 | prompt: a man riding on a lion
+2026-05-07 09:10:22,920 [INFO] __main__: Task 1ea4dd5e-227e-4abc-a474-815776844301 started for user 1
+2026-05-07 09:10:22,923 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:10:22] "POST /generate HTTP/1.1" 200 -
+2026-05-07 09:10:22,930 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): api-inference.huggingface.co:443
+2026-05-07 09:10:23,642 [DEBUG] urllib3.connectionpool: https://api-inference.huggingface.co:443 "POST /models/stabilityai/stable-diffusion-xl-base-1.0 HTTP/1.1" 404 187
+2026-05-07 09:10:23,644 [ERROR] __main__: Task 1ea4dd5e-227e-4abc-a474-815776844301 failed: Model 'stabilityai/stable-diffusion-xl-base-1.0' not found on Hugging Face.
+2026-05-07 09:10:25,948 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:10:25] "GET /task/1ea4dd5e-227e-4abc-a474-815776844301 HTTP/1.1" 200 -
+2026-05-07 09:10:35,260 [INFO] services: Requesting: https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0 | prompt: a man riding on a lion
+2026-05-07 09:10:35,260 [INFO] __main__: Task a4eb4f7c-741e-42b5-8897-1d468410c96b started for user 1
+2026-05-07 09:10:35,267 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:10:35] "POST /generate HTTP/1.1" 200 -
+2026-05-07 09:10:35,269 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): api-inference.huggingface.co:443
+2026-05-07 09:10:35,930 [DEBUG] urllib3.connectionpool: https://api-inference.huggingface.co:443 "POST /models/stabilityai/stable-diffusion-xl-base-1.0 HTTP/1.1" 404 187
+2026-05-07 09:10:35,933 [ERROR] __main__: Task a4eb4f7c-741e-42b5-8897-1d468410c96b failed: Model 'stabilityai/stable-diffusion-xl-base-1.0' not found on Hugging Face.
+2026-05-07 09:10:38,285 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:10:38] "GET /task/a4eb4f7c-741e-42b5-8897-1d468410c96b HTTP/1.1" 200 -
+2026-05-07 09:12:13,624 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.77:5000
+2026-05-07 09:12:13,625 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-05-07 09:12:21,128 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:12:21] "GET / HTTP/1.1" 200 -
+2026-05-07 09:12:21,435 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:12:21] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-07 09:12:21,441 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:12:21] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-07 09:12:33,854 [INFO] services: Requesting: https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2-1 | prompt: a man riding on a lion
+2026-05-07 09:12:33,854 [INFO] __main__: Task e0ed96e8-3e65-4373-8094-c2ec58cb99d2 started for user 1
+2026-05-07 09:12:33,858 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:12:33] "POST /generate HTTP/1.1" 200 -
+2026-05-07 09:12:33,873 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): api-inference.huggingface.co:443
+2026-05-07 09:12:34,610 [DEBUG] urllib3.connectionpool: https://api-inference.huggingface.co:443 "POST /models/stabilityai/stable-diffusion-2-1 HTTP/1.1" 404 179
+2026-05-07 09:12:34,612 [ERROR] __main__: Task e0ed96e8-3e65-4373-8094-c2ec58cb99d2 failed: Model 'stabilityai/stable-diffusion-2-1' not found on Hugging Face.
+2026-05-07 09:12:36,903 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:12:36] "GET /task/e0ed96e8-3e65-4373-8094-c2ec58cb99d2 HTTP/1.1" 200 -
+2026-05-07 09:12:47,275 [INFO] services: Requesting: https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2-1 | prompt: a man riding on a lion
+2026-05-07 09:12:47,276 [INFO] __main__: Task 49cc5239-4ee5-41ee-949c-d3603bf54087 started for user 1
+2026-05-07 09:12:47,280 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:12:47] "POST /generate HTTP/1.1" 200 -
+2026-05-07 09:12:47,286 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): api-inference.huggingface.co:443
+2026-05-07 09:12:47,816 [DEBUG] urllib3.connectionpool: https://api-inference.huggingface.co:443 "POST /models/stabilityai/stable-diffusion-2-1 HTTP/1.1" 404 179
+2026-05-07 09:12:47,820 [ERROR] __main__: Task 49cc5239-4ee5-41ee-949c-d3603bf54087 failed: Model 'stabilityai/stable-diffusion-2-1' not found on Hugging Face.
+2026-05-07 09:12:50,311 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:12:50] "GET /task/49cc5239-4ee5-41ee-949c-d3603bf54087 HTTP/1.1" 200 -
+2026-05-07 09:14:38,964 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.77:5000
+2026-05-07 09:14:38,964 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-05-07 09:14:41,725 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:14:41] "GET / HTTP/1.1" 200 -
+2026-05-07 09:14:42,136 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:14:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-07 09:14:42,140 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:14:42] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-07 09:14:51,649 [INFO] services: Pollinations request: model=flux, prompt=a man riding on a lion
+2026-05-07 09:14:51,649 [INFO] __main__: Task 8f8d1a80-e988-4912-8afc-1a4f60d08a69 started for user 1
+2026-05-07 09:14:51,652 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:14:51] "POST /generate HTTP/1.1" 200 -
+2026-05-07 09:14:51,666 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): image.pollinations.ai:443
+2026-05-07 09:14:52,935 [DEBUG] urllib3.connectionpool: https://image.pollinations.ai:443 "GET /prompt/a%20man%20riding%20on%20a%20lion%2C%20masterpiece%2C%20best%20quality%2C%20highly%20detailed%2C%20sharp%20focus%2C%208k?model=flux&width=512&height=512&seed=42&nologo=true&enhance=false HTTP/1.1" 200 None
+2026-05-07 09:14:53,164 [DEBUG] PIL.TiffImagePlugin: tag: Make (271) - type: string (2) Tag Location: 22 - Data Location: 126 - value: b'sana\x00'
+2026-05-07 09:14:53,166 [DEBUG] PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2026-05-07 09:14:53,167 [DEBUG] PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 46 - Data Location: 110 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2026-05-07 09:14:53,169 [DEBUG] PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 58 - Data Location: 118 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2026-05-07 09:14:53,170 [DEBUG] PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2026-05-07 09:14:53,173 [DEBUG] PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2026-05-07 09:14:53,175 [DEBUG] PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'\x94\x02\x00\x00'
+2026-05-07 09:14:53,177 [DEBUG] PIL.TiffImagePlugin: tag: UserComment (37510) - type: undefined (7) Tag Location: 106 - Data Location: 132 - value: <table: 527 bytes>
+2026-05-07 09:14:53,179 [INFO] services: Image generated successfully via Pollinations.
+2026-05-07 09:14:53,440 [INFO] services: Saved: static\images\img_1_20260507_091453_185343.png
+2026-05-07 09:14:54,683 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:14:54] "GET /task/8f8d1a80-e988-4912-8afc-1a4f60d08a69 HTTP/1.1" 200 -
+2026-05-07 09:14:54,713 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:14:54] "GET /static/images/img_1_20260507_091453_185343.png HTTP/1.1" 200 -
+2026-05-07 09:15:28,122 [INFO] services: Pollinations request: model=flux, prompt=a man looking into a ghost eyes
+2026-05-07 09:15:28,122 [INFO] __main__: Task 416827a8-9347-4681-b104-12bee4088966 started for user 1
+2026-05-07 09:15:28,128 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:15:28] "POST /generate HTTP/1.1" 200 -
+2026-05-07 09:15:28,134 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): image.pollinations.ai:443
+2026-05-07 09:15:31,157 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:15:31] "GET /task/416827a8-9347-4681-b104-12bee4088966 HTTP/1.1" 200 -
+2026-05-07 09:15:34,146 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:15:34] "GET /task/416827a8-9347-4681-b104-12bee4088966 HTTP/1.1" 200 -
+2026-05-07 09:15:37,157 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:15:37] "GET /task/416827a8-9347-4681-b104-12bee4088966 HTTP/1.1" 200 -
+2026-05-07 09:15:40,150 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:15:40] "GET /task/416827a8-9347-4681-b104-12bee4088966 HTTP/1.1" 200 -
+2026-05-07 09:15:43,151 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:15:43] "GET /task/416827a8-9347-4681-b104-12bee4088966 HTTP/1.1" 200 -
+2026-05-07 09:15:46,144 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:15:46] "GET /task/416827a8-9347-4681-b104-12bee4088966 HTTP/1.1" 200 -
+2026-05-07 09:15:49,157 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:15:49] "GET /task/416827a8-9347-4681-b104-12bee4088966 HTTP/1.1" 200 -
+2026-05-07 09:15:52,150 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:15:52] "GET /task/416827a8-9347-4681-b104-12bee4088966 HTTP/1.1" 200 -
+2026-05-07 09:15:55,145 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:15:55] "GET /task/416827a8-9347-4681-b104-12bee4088966 HTTP/1.1" 200 -
+2026-05-07 09:15:57,989 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:15:57] "GET / HTTP/1.1" 200 -
+2026-05-07 09:15:58,009 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:15:58] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-07 09:15:58,023 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:15:58] "[36mGET /static/images/img_1_20260507_091453_185343.png HTTP/1.1[0m" 304 -
+2026-05-07 09:15:58,024 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:15:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-07 09:16:09,389 [INFO] services: Pollinations request: model=flux, prompt=man looking into a ghost eye
+2026-05-07 09:16:09,389 [INFO] __main__: Task 964c384b-9d3d-42bb-a9fd-efc1597b0060 started for user 1
+2026-05-07 09:16:09,395 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:16:09] "POST /generate HTTP/1.1" 200 -
+2026-05-07 09:16:09,401 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): image.pollinations.ai:443
+2026-05-07 09:16:10,038 [DEBUG] urllib3.connectionpool: https://image.pollinations.ai:443 "GET /prompt/man%20looking%20into%20a%20ghost%20eye%2C%20masterpiece%2C%20best%20quality%2C%20highly%20detailed%2C%20sharp%20focus%2C%208k?model=flux&width=512&height=512&seed=42&nologo=true&enhance=false HTTP/1.1" 429 None
+2026-05-07 09:16:10,040 [ERROR] __main__: Task 964c384b-9d3d-42bb-a9fd-efc1597b0060 failed: Generation failed (HTTP 429). Try again.
+2026-05-07 09:16:12,422 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:16:12] "GET /task/964c384b-9d3d-42bb-a9fd-efc1597b0060 HTTP/1.1" 200 -
+2026-05-07 09:16:22,942 [DEBUG] urllib3.connectionpool: https://image.pollinations.ai:443 "GET /prompt/a%20man%20looking%20into%20a%20ghost%20eyes%2C%20masterpiece%2C%20best%20quality%2C%20highly%20detailed%2C%20sharp%20focus%2C%208k?model=flux&width=512&height=512&seed=42&nologo=true&enhance=false HTTP/1.1" 200 None
+2026-05-07 09:16:22,951 [DEBUG] PIL.TiffImagePlugin: tag: Make (271) - type: string (2) Tag Location: 22 - Data Location: 126 - value: b'sana\x00'
+2026-05-07 09:16:22,953 [DEBUG] PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2026-05-07 09:16:22,954 [DEBUG] PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 46 - Data Location: 110 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2026-05-07 09:16:22,956 [DEBUG] PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 58 - Data Location: 118 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2026-05-07 09:16:22,956 [DEBUG] PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2026-05-07 09:16:22,957 [DEBUG] PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2026-05-07 09:16:22,957 [DEBUG] PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'\xa6\x02\x00\x00'
+2026-05-07 09:16:22,959 [DEBUG] PIL.TiffImagePlugin: tag: UserComment (37510) - type: undefined (7) Tag Location: 106 - Data Location: 132 - value: <table: 545 bytes>
+2026-05-07 09:16:22,964 [INFO] services: Image generated successfully via Pollinations.
+2026-05-07 09:16:23,227 [INFO] services: Saved: static\images\img_1_20260507_091622_974687.png
+2026-05-07 09:16:26,050 [INFO] services: Pollinations request: model=flux, prompt=lions are fighting
+2026-05-07 09:16:26,050 [INFO] __main__: Task 77f999e4-54b3-4e54-bbc2-42bb4670cc47 started for user 1
+2026-05-07 09:16:26,053 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:16:26] "POST /generate HTTP/1.1" 200 -
+2026-05-07 09:16:26,060 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): image.pollinations.ai:443
+2026-05-07 09:16:29,072 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:16:29] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:16:32,073 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:16:32] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:16:35,079 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:16:35] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:16:38,079 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:16:38] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:16:41,081 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:16:41] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:16:44,076 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:16:44] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:16:47,794 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:16:47] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:16:50,073 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:16:50] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:16:53,078 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:16:53] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:16:56,084 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:16:56] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:16:59,076 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:16:59] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:17:02,074 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:17:02] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:17:05,074 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:17:05] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:17:08,078 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:17:08] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:17:11,076 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:17:11] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:17:14,070 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:17:14] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:17:17,076 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:17:17] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:17:20,083 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:17:20] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:17:23,074 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:17:23] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:17:26,112 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:17:26] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:17:29,088 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:17:29] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:17:32,081 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:17:32] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:17:35,074 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:17:35] "GET /task/77f999e4-54b3-4e54-bbc2-42bb4670cc47 HTTP/1.1" 200 -
+2026-05-07 09:17:35,248 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:17:35] "GET / HTTP/1.1" 200 -
+2026-05-07 09:17:35,265 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:17:35] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-07 09:17:35,275 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:17:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-07 09:17:35,279 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:17:35] "[36mGET /static/images/img_1_20260507_091453_185343.png HTTP/1.1[0m" 304 -
+2026-05-07 09:17:35,330 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:17:35] "GET /static/images/img_1_20260507_091622_974687.png HTTP/1.1" 200 -
+2026-05-07 09:17:53,070 [DEBUG] urllib3.connectionpool: https://image.pollinations.ai:443 "GET /prompt/lions%20are%20fighting%2C%20masterpiece%2C%20best%20quality%2C%20highly%20detailed%2C%20sharp%20focus%2C%208k?model=flux&width=512&height=512&seed=42&nologo=true&enhance=false HTTP/1.1" 200 None
+2026-05-07 09:17:53,122 [DEBUG] PIL.TiffImagePlugin: tag: Make (271) - type: string (2) Tag Location: 22 - Data Location: 126 - value: b'sana\x00'
+2026-05-07 09:17:53,125 [DEBUG] PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2026-05-07 09:17:53,126 [DEBUG] PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 46 - Data Location: 110 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2026-05-07 09:17:53,127 [DEBUG] PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 58 - Data Location: 118 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2026-05-07 09:17:53,129 [DEBUG] PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2026-05-07 09:17:53,130 [DEBUG] PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2026-05-07 09:17:53,131 [DEBUG] PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'\x8c\x02\x00\x00'
+2026-05-07 09:17:53,132 [DEBUG] PIL.TiffImagePlugin: tag: UserComment (37510) - type: undefined (7) Tag Location: 106 - Data Location: 132 - value: <table: 519 bytes>
+2026-05-07 09:17:53,134 [INFO] services: Image generated successfully via Pollinations.
+2026-05-07 09:17:53,369 [INFO] services: Saved: static\images\img_1_20260507_091753_140231.png
+2026-05-07 09:17:54,271 [INFO] services: Pollinations request: model=turbo, prompt=two lions are fighting
+2026-05-07 09:17:54,271 [INFO] __main__: Task 1ce6321e-ef8d-4f77-86ef-46ee01233900 started for user 1
+2026-05-07 09:17:54,274 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:17:54] "POST /generate HTTP/1.1" 200 -
+2026-05-07 09:17:54,278 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): image.pollinations.ai:443
+2026-05-07 09:17:57,293 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:17:57] "GET /task/1ce6321e-ef8d-4f77-86ef-46ee01233900 HTTP/1.1" 200 -
+2026-05-07 09:18:00,298 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:18:00] "GET /task/1ce6321e-ef8d-4f77-86ef-46ee01233900 HTTP/1.1" 200 -
+2026-05-07 09:18:03,297 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:18:03] "GET /task/1ce6321e-ef8d-4f77-86ef-46ee01233900 HTTP/1.1" 200 -
+2026-05-07 09:18:06,299 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:18:06] "GET /task/1ce6321e-ef8d-4f77-86ef-46ee01233900 HTTP/1.1" 200 -
+2026-05-07 09:18:09,298 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:18:09] "GET /task/1ce6321e-ef8d-4f77-86ef-46ee01233900 HTTP/1.1" 200 -
+2026-05-07 09:18:12,289 [INFO] werkzeug: 127.0.0.1 - - [07/May/2026 09:18:12] "GET /task/1ce6321e-ef8d-4f77-86ef-46ee01233900 HTTP/1.1" 200 -
+2026-05-07 09:19:23,061 [DEBUG] urllib3.connectionpool: https://image.pollinations.ai:443 "GET /prompt/two%20lions%20are%20fighting%2C%20masterpiece%2C%20best%20quality%2C%20highly%20detailed%2C%20sharp%20focus%2C%208k?model=turbo&width=512&height=512&seed=42&nologo=true&enhance=false HTTP/1.1" 200 None
+2026-05-07 09:19:23,189 [DEBUG] PIL.TiffImagePlugin: tag: Make (271) - type: string (2) Tag Location: 22 - Data Location: 126 - value: b'sana\x00'
+2026-05-07 09:19:23,190 [DEBUG] PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2026-05-07 09:19:23,191 [DEBUG] PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 46 - Data Location: 110 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2026-05-07 09:19:23,192 [DEBUG] PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 58 - Data Location: 118 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2026-05-07 09:19:23,193 [DEBUG] PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2026-05-07 09:19:23,193 [DEBUG] PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2026-05-07 09:19:23,194 [DEBUG] PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'\x94\x02\x00\x00'
+2026-05-07 09:19:23,194 [DEBUG] PIL.TiffImagePlugin: tag: UserComment (37510) - type: undefined (7) Tag Location: 106 - Data Location: 132 - value: <table: 527 bytes>
+2026-05-07 09:19:23,194 [INFO] services: Image generated successfully via Pollinations.
+2026-05-07 09:19:23,404 [INFO] services: Saved: static\images\img_1_20260507_091923_197935.png
+2026-05-11 15:38:12,665 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.77:5000
+2026-05-11 15:38:12,667 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-05-11 15:38:22,236 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:22] "GET / HTTP/1.1" 200 -
+2026-05-11 15:38:22,532 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:22] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-11 15:38:22,568 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-11 15:38:22,771 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 15:38:24,552 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:24] "GET /register HTTP/1.1" 200 -
+2026-05-11 15:38:24,570 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:24] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-11 15:38:24,573 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-11 15:38:42,043 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:42] "POST /register HTTP/1.1" 200 -
+2026-05-11 15:38:42,073 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:42] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-11 15:38:42,076 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-11 15:38:47,069 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:47] "GET /login HTTP/1.1" 200 -
+2026-05-11 15:38:47,084 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:47] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-11 15:38:47,087 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-11 15:38:55,287 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:55] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-05-11 15:38:55,308 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:55] "GET / HTTP/1.1" 200 -
+2026-05-11 15:38:55,350 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:55] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-11 15:38:55,350 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:55] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-11 15:38:55,460 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:55] "GET /static/images/img_1_20260507_091753_140231.png HTTP/1.1" 200 -
+2026-05-11 15:38:55,461 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:55] "[36mGET /static/images/img_1_20260507_091622_974687.png HTTP/1.1[0m" 304 -
+2026-05-11 15:38:55,461 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:55] "GET /static/images/img_1_20260507_091923_197935.png HTTP/1.1" 200 -
+2026-05-11 15:38:55,463 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:38:55] "[36mGET /static/images/img_1_20260507_091453_185343.png HTTP/1.1[0m" 304 -
+2026-05-11 15:39:11,416 [INFO] services: Pollinations request: model=flux, prompt=cat waling on a moon
+2026-05-11 15:39:11,417 [INFO] __main__: Task 882aaba4-2072-4185-a88a-90e49eccce2f started for user 1
+2026-05-11 15:39:11,419 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:39:11] "POST /generate HTTP/1.1" 200 -
+2026-05-11 15:39:11,434 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): image.pollinations.ai:443
+2026-05-11 15:39:12,933 [DEBUG] urllib3.connectionpool: https://image.pollinations.ai:443 "GET /prompt/cat%20waling%20on%20a%20moon%2C%20masterpiece%2C%20best%20quality%2C%20highly%20detailed%2C%20sharp%20focus%2C%208k?model=flux&width=512&height=512&seed=42&nologo=true&enhance=false HTTP/1.1" 200 None
+2026-05-11 15:39:13,152 [DEBUG] PIL.TiffImagePlugin: tag: Make (271) - type: string (2) Tag Location: 22 - Data Location: 126 - value: b'sana\x00'
+2026-05-11 15:39:13,153 [DEBUG] PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2026-05-11 15:39:13,154 [DEBUG] PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 46 - Data Location: 110 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2026-05-11 15:39:13,154 [DEBUG] PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 58 - Data Location: 118 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2026-05-11 15:39:13,155 [DEBUG] PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2026-05-11 15:39:13,155 [DEBUG] PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2026-05-11 15:39:13,156 [DEBUG] PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'\x90\x02\x00\x00'
+2026-05-11 15:39:13,156 [DEBUG] PIL.TiffImagePlugin: tag: UserComment (37510) - type: undefined (7) Tag Location: 106 - Data Location: 132 - value: <table: 523 bytes>
+2026-05-11 15:39:13,157 [INFO] services: Image generated successfully via Pollinations.
+2026-05-11 15:39:13,457 [INFO] services: Saved: static\images\img_1_20260511_153913_165363.png
+2026-05-11 15:39:14,448 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:39:14] "GET /task/882aaba4-2072-4185-a88a-90e49eccce2f HTTP/1.1" 200 -
+2026-05-11 15:39:14,499 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:39:14] "GET /static/images/img_1_20260511_153913_165363.png HTTP/1.1" 200 -
+2026-05-11 15:39:32,408 [INFO] services: Pollinations request: model=flux, prompt=man hold a fire
+2026-05-11 15:39:32,408 [INFO] __main__: Task be9e9d9a-eecc-4626-8305-105fb726c76b started for user 1
+2026-05-11 15:39:32,411 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:39:32] "POST /generate HTTP/1.1" 200 -
+2026-05-11 15:39:32,419 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): image.pollinations.ai:443
+2026-05-11 15:39:35,437 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:39:35] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:39:38,444 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:39:38] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:39:41,427 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:39:41] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:39:44,432 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:39:44] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:39:47,434 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:39:47] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:39:50,429 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:39:50] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:39:53,433 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:39:53] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:39:56,551 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:39:56] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:39:59,540 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:39:59] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:40:02,536 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:40:02] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:40:05,540 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:40:05] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:40:08,535 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:40:08] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:40:11,548 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:40:11] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:40:14,538 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:40:14] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:40:17,550 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:40:17] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:40:20,540 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:40:20] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:40:23,547 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:40:23] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:40:26,545 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:40:26] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:40:29,534 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:40:29] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:40:32,540 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:40:32] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:40:35,547 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:40:35] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:40:38,548 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:40:38] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:40:41,536 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:40:41] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:40:42,888 [DEBUG] urllib3.connectionpool: https://image.pollinations.ai:443 "GET /prompt/man%20hold%20a%20fire%2C%20masterpiece%2C%20best%20quality%2C%20highly%20detailed%2C%20sharp%20focus%2C%208k?model=flux&width=512&height=512&seed=42&nologo=true&enhance=false HTTP/1.1" 200 None
+2026-05-11 15:40:42,892 [DEBUG] PIL.TiffImagePlugin: tag: Make (271) - type: string (2) Tag Location: 22 - Data Location: 126 - value: b'sana\x00'
+2026-05-11 15:40:42,893 [DEBUG] PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2026-05-11 15:40:42,893 [DEBUG] PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 46 - Data Location: 110 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2026-05-11 15:40:42,893 [DEBUG] PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 58 - Data Location: 118 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2026-05-11 15:40:42,894 [DEBUG] PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2026-05-11 15:40:42,895 [DEBUG] PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2026-05-11 15:40:42,895 [DEBUG] PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'\x86\x02\x00\x00'
+2026-05-11 15:40:42,896 [DEBUG] PIL.TiffImagePlugin: tag: UserComment (37510) - type: undefined (7) Tag Location: 106 - Data Location: 132 - value: <table: 513 bytes>
+2026-05-11 15:40:42,897 [INFO] services: Image generated successfully via Pollinations.
+2026-05-11 15:40:43,292 [INFO] services: Saved: static\images\img_1_20260511_154042_905856.png
+2026-05-11 15:40:44,433 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:40:44] "GET /task/be9e9d9a-eecc-4626-8305-105fb726c76b HTTP/1.1" 200 -
+2026-05-11 15:40:44,463 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:40:44] "GET /static/images/img_1_20260511_154042_905856.png HTTP/1.1" 200 -
+2026-05-11 15:47:47,465 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.77:5000
+2026-05-11 15:47:47,466 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-05-11 15:47:57,206 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:47:57] "GET / HTTP/1.1" 200 -
+2026-05-11 15:47:57,412 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:47:57] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-11 15:47:57,414 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:47:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-11 15:47:57,548 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:47:57] "[36mGET /static/images/img_1_20260511_154042_905856.png HTTP/1.1[0m" 304 -
+2026-05-11 15:47:57,613 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:47:57] "[36mGET /static/images/img_1_20260511_153913_165363.png HTTP/1.1[0m" 304 -
+2026-05-11 15:47:57,638 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:47:57] "[36mGET /static/images/img_1_20260507_091923_197935.png HTTP/1.1[0m" 304 -
+2026-05-11 15:47:57,651 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:47:57] "[36mGET /static/images/img_1_20260507_091753_140231.png HTTP/1.1[0m" 304 -
+2026-05-11 15:47:57,684 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:47:57] "[36mGET /static/images/img_1_20260507_091622_974687.png HTTP/1.1[0m" 304 -
+2026-05-11 15:47:57,712 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:47:57] "[36mGET /static/images/img_1_20260507_091453_185343.png HTTP/1.1[0m" 304 -
+2026-05-11 15:48:14,683 [ERROR] __main__: Task a7f3bd90-78ff-4223-933c-5688828073f3 failed: Generation failed: module 'google.generativeai' has no attribute 'ImageGenerationModel'
+2026-05-11 15:48:14,683 [INFO] __main__: Task a7f3bd90-78ff-4223-933c-5688828073f3 started for user 1
+2026-05-11 15:48:14,685 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:48:14] "POST /generate HTTP/1.1" 200 -
+2026-05-11 15:48:17,724 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:48:17] "GET /task/a7f3bd90-78ff-4223-933c-5688828073f3 HTTP/1.1" 200 -
+2026-05-11 15:50:10,821 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.77:5000
+2026-05-11 15:50:10,822 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-05-11 15:50:20,882 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:50:20] "GET / HTTP/1.1" 200 -
+2026-05-11 15:50:21,348 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:50:21] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-11 15:50:21,350 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:50:21] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-11 15:50:21,482 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:50:21] "[36mGET /static/images/img_1_20260511_153913_165363.png HTTP/1.1[0m" 304 -
+2026-05-11 15:50:21,485 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:50:21] "[36mGET /static/images/img_1_20260507_091753_140231.png HTTP/1.1[0m" 304 -
+2026-05-11 15:50:21,486 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:50:21] "[36mGET /static/images/img_1_20260507_091923_197935.png HTTP/1.1[0m" 304 -
+2026-05-11 15:50:21,486 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:50:21] "[36mGET /static/images/img_1_20260511_154042_905856.png HTTP/1.1[0m" 304 -
+2026-05-11 15:50:21,486 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:50:21] "[36mGET /static/images/img_1_20260507_091622_974687.png HTTP/1.1[0m" 304 -
+2026-05-11 15:50:21,487 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:50:21] "[36mGET /static/images/img_1_20260507_091453_185343.png HTTP/1.1[0m" 304 -
+2026-05-11 15:50:35,457 [INFO] __main__: Task 8faf6d79-5d91-4c31-8d4c-b69c73b6085d started for user 1
+2026-05-11 15:50:35,481 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:50:35] "POST /generate HTTP/1.1" 200 -
+2026-05-11 15:50:35,500 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): generativelanguage.googleapis.com:443
+2026-05-11 15:50:36,263 [DEBUG] urllib3.connectionpool: https://generativelanguage.googleapis.com:443 "POST /v1beta/models/imagen-3.0-generate-002:predict HTTP/1.1" 404 None
+2026-05-11 15:50:36,269 [ERROR] __main__: Task 8faf6d79-5d91-4c31-8d4c-b69c73b6085d failed: API Error 404: models/imagen-3.0-generate-002 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.
+2026-05-11 15:50:38,508 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:50:38] "GET /task/8faf6d79-5d91-4c31-8d4c-b69c73b6085d HTTP/1.1" 200 -
+2026-05-11 15:50:46,071 [INFO] __main__: Task 4e44ebb1-e2ea-4a60-9d22-aff2bf5e9f8b started for user 1
+2026-05-11 15:50:46,086 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:50:46] "POST /generate HTTP/1.1" 200 -
+2026-05-11 15:50:46,092 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): generativelanguage.googleapis.com:443
+2026-05-11 15:50:46,736 [DEBUG] urllib3.connectionpool: https://generativelanguage.googleapis.com:443 "POST /v1beta/models/imagen-3.0-generate-002:predict HTTP/1.1" 404 None
+2026-05-11 15:50:46,739 [ERROR] __main__: Task 4e44ebb1-e2ea-4a60-9d22-aff2bf5e9f8b failed: API Error 404: models/imagen-3.0-generate-002 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.
+2026-05-11 15:50:49,107 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:50:49] "GET /task/4e44ebb1-e2ea-4a60-9d22-aff2bf5e9f8b HTTP/1.1" 200 -
+2026-05-11 15:52:44,206 [INFO] __main__: Task 56e65261-da8d-4b95-9a05-3208bb45fb14 started for user 1
+2026-05-11 15:52:44,273 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:52:44] "POST /generate HTTP/1.1" 200 -
+2026-05-11 15:52:44,279 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): generativelanguage.googleapis.com:443
+2026-05-11 15:52:44,754 [DEBUG] urllib3.connectionpool: https://generativelanguage.googleapis.com:443 "POST /v1beta/models/imagen-3.0-generate-002:predict HTTP/1.1" 404 None
+2026-05-11 15:52:44,757 [ERROR] __main__: Task 56e65261-da8d-4b95-9a05-3208bb45fb14 failed: API Error 404: models/imagen-3.0-generate-002 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.
+2026-05-11 15:52:47,310 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:52:47] "GET /task/56e65261-da8d-4b95-9a05-3208bb45fb14 HTTP/1.1" 200 -
+2026-05-11 15:52:49,573 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:52:49] "GET / HTTP/1.1" 200 -
+2026-05-11 15:52:49,610 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:52:49] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-11 15:52:49,610 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:52:49] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-11 15:52:49,625 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:52:49] "[36mGET /static/images/img_1_20260511_153913_165363.png HTTP/1.1[0m" 304 -
+2026-05-11 15:52:49,630 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:52:49] "[36mGET /static/images/img_1_20260511_154042_905856.png HTTP/1.1[0m" 304 -
+2026-05-11 15:52:49,641 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:52:49] "[36mGET /static/images/img_1_20260507_091923_197935.png HTTP/1.1[0m" 304 -
+2026-05-11 15:52:49,651 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:52:49] "[36mGET /static/images/img_1_20260507_091753_140231.png HTTP/1.1[0m" 304 -
+2026-05-11 15:52:49,670 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:52:49] "[36mGET /static/images/img_1_20260507_091622_974687.png HTTP/1.1[0m" 304 -
+2026-05-11 15:52:49,670 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:52:49] "[36mGET /static/images/img_1_20260507_091453_185343.png HTTP/1.1[0m" 304 -
+2026-05-11 15:53:02,593 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.77:5000
+2026-05-11 15:53:02,593 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-05-11 15:53:04,414 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:04] "GET / HTTP/1.1" 200 -
+2026-05-11 15:53:04,979 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:04] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-11 15:53:04,982 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-11 15:53:05,177 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 15:53:08,294 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:08] "GET /register HTTP/1.1" 200 -
+2026-05-11 15:53:08,320 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:08] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-11 15:53:08,326 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:08] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-11 15:53:10,730 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:10] "GET /login HTTP/1.1" 200 -
+2026-05-11 15:53:10,746 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:10] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-11 15:53:10,751 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-11 15:53:19,768 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:19] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-05-11 15:53:19,798 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:19] "GET / HTTP/1.1" 200 -
+2026-05-11 15:53:19,829 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:19] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-11 15:53:19,831 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-11 15:53:19,894 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:19] "[36mGET /static/images/img_1_20260511_154042_905856.png HTTP/1.1[0m" 304 -
+2026-05-11 15:53:19,897 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:19] "[36mGET /static/images/img_1_20260511_153913_165363.png HTTP/1.1[0m" 304 -
+2026-05-11 15:53:19,898 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:19] "[36mGET /static/images/img_1_20260507_091923_197935.png HTTP/1.1[0m" 304 -
+2026-05-11 15:53:19,906 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:19] "[36mGET /static/images/img_1_20260507_091753_140231.png HTTP/1.1[0m" 304 -
+2026-05-11 15:53:19,909 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:19] "[36mGET /static/images/img_1_20260507_091622_974687.png HTTP/1.1[0m" 304 -
+2026-05-11 15:53:19,915 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:19] "[36mGET /static/images/img_1_20260507_091453_185343.png HTTP/1.1[0m" 304 -
+2026-05-11 15:53:30,623 [INFO] __main__: Task 70172976-f765-40ed-a59f-55fed8a3b78e started for user 1
+2026-05-11 15:53:30,639 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:30] "POST /generate HTTP/1.1" 200 -
+2026-05-11 15:53:30,656 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): image.pollinations.ai:443
+2026-05-11 15:53:31,961 [DEBUG] urllib3.connectionpool: https://image.pollinations.ai:443 "GET /prompt/a%20man%20chasing%20a%20golden%20deer%2C%20masterpiece%2C%20best%20quality%2C%20highly%20detailed%2C%20sharp%20focus%2C%208k?model=flux&width=1024&height=1024&seed=42&nologo=true HTTP/1.1" 200 None
+2026-05-11 15:53:32,070 [DEBUG] PIL.TiffImagePlugin: tag: Make (271) - type: string (2) Tag Location: 22 - Data Location: 126 - value: b'sana\x00'
+2026-05-11 15:53:32,071 [DEBUG] PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2026-05-11 15:53:32,072 [DEBUG] PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 46 - Data Location: 110 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2026-05-11 15:53:32,073 [DEBUG] PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 58 - Data Location: 118 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2026-05-11 15:53:32,074 [DEBUG] PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2026-05-11 15:53:32,075 [DEBUG] PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2026-05-11 15:53:32,075 [DEBUG] PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'\x9e\x02\x00\x00'
+2026-05-11 15:53:32,077 [DEBUG] PIL.TiffImagePlugin: tag: UserComment (37510) - type: undefined (7) Tag Location: 106 - Data Location: 132 - value: <table: 537 bytes>
+2026-05-11 15:53:32,078 [INFO] services: Image generated successfully.
+2026-05-11 15:53:33,668 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:33] "GET /task/70172976-f765-40ed-a59f-55fed8a3b78e HTTP/1.1" 200 -
+2026-05-11 15:53:33,689 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:33] "GET /static/images/img_1_20260511_155332_084482.png HTTP/1.1" 200 -
+2026-05-11 15:53:50,585 [INFO] __main__: Task ebcdb37c-1284-4210-a32b-72ec2339c21b started for user 1
+2026-05-11 15:53:50,601 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:50] "POST /generate HTTP/1.1" 200 -
+2026-05-11 15:53:50,603 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): image.pollinations.ai:443
+2026-05-11 15:53:53,624 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:53] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:53:56,625 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:56] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:53:59,622 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:53:59] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:54:02,617 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:54:02] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:54:05,632 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:54:05] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:54:08,628 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:54:08] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:54:11,624 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:54:11] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:54:14,623 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:54:14] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:54:17,627 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:54:17] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:54:20,621 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:54:20] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:54:23,620 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:54:23] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:54:26,632 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:54:26] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:54:29,622 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:54:29] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:54:32,628 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:54:32] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:54:35,628 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:54:35] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:54:38,621 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:54:38] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:54:43,300 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:54:43] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:54:44,626 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:54:44] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:54:47,623 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:54:47] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:54:50,624 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:54:50] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:54:53,622 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:54:53] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:54:56,622 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:54:56] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:54:59,620 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:54:59] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:55:02,017 [DEBUG] urllib3.connectionpool: https://image.pollinations.ai:443 "GET /prompt/a%20man%20chasing%20a%20flaming%20deer%2C%20masterpiece%2C%20best%20quality%2C%20highly%20detailed%2C%20sharp%20focus%2C%208k?model=flux&width=1024&height=1024&seed=42&nologo=true HTTP/1.1" 200 None
+2026-05-11 15:55:02,090 [DEBUG] PIL.TiffImagePlugin: tag: Make (271) - type: string (2) Tag Location: 22 - Data Location: 126 - value: b'sana\x00'
+2026-05-11 15:55:02,091 [DEBUG] PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2026-05-11 15:55:02,091 [DEBUG] PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 46 - Data Location: 110 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2026-05-11 15:55:02,092 [DEBUG] PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 58 - Data Location: 118 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2026-05-11 15:55:02,092 [DEBUG] PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2026-05-11 15:55:02,093 [DEBUG] PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2026-05-11 15:55:02,093 [DEBUG] PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'\xa0\x02\x00\x00'
+2026-05-11 15:55:02,094 [DEBUG] PIL.TiffImagePlugin: tag: UserComment (37510) - type: undefined (7) Tag Location: 106 - Data Location: 132 - value: <table: 539 bytes>
+2026-05-11 15:55:02,095 [INFO] services: Image generated successfully.
+2026-05-11 15:55:02,623 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:55:02] "GET /task/ebcdb37c-1284-4210-a32b-72ec2339c21b HTTP/1.1" 200 -
+2026-05-11 15:55:05,001 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:55:05] "GET / HTTP/1.1" 200 -
+2026-05-11 15:55:05,030 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:55:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-11 15:55:05,031 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:55:05] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-11 15:55:05,055 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:55:05] "[36mGET /static/images/img_1_20260511_153913_165363.png HTTP/1.1[0m" 304 -
+2026-05-11 15:55:05,057 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:55:05] "[36mGET /static/images/img_1_20260507_091923_197935.png HTTP/1.1[0m" 304 -
+2026-05-11 15:55:05,057 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:55:05] "[36mGET /static/images/img_1_20260511_155332_084482.png HTTP/1.1[0m" 304 -
+2026-05-11 15:55:05,059 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:55:05] "[36mGET /static/images/img_1_20260511_154042_905856.png HTTP/1.1[0m" 304 -
+2026-05-11 15:55:05,064 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:55:05] "[36mGET /static/images/img_1_20260507_091753_140231.png HTTP/1.1[0m" 304 -
+2026-05-11 15:55:05,085 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:55:05] "[36mGET /static/images/img_1_20260507_091622_974687.png HTTP/1.1[0m" 304 -
+2026-05-11 15:55:05,093 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:55:05] "[36mGET /static/images/img_1_20260507_091453_185343.png HTTP/1.1[0m" 304 -
+2026-05-11 15:55:05,096 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:55:05] "GET /static/images/img_1_20260511_155502_100464.png HTTP/1.1" 200 -
+2026-05-11 15:55:36,115 [INFO] __main__: Task a0b8ac03-9360-43f5-ab29-5cc2bca84e25 started for user 1
+2026-05-11 15:55:36,129 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:55:36] "POST /generate HTTP/1.1" 200 -
+2026-05-11 15:55:36,131 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): image.pollinations.ai:443
+2026-05-11 15:55:39,157 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:55:39] "GET /task/a0b8ac03-9360-43f5-ab29-5cc2bca84e25 HTTP/1.1" 200 -
+2026-05-11 15:55:42,158 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:55:42] "GET /task/a0b8ac03-9360-43f5-ab29-5cc2bca84e25 HTTP/1.1" 200 -
+2026-05-11 15:55:45,171 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:55:45] "GET /task/a0b8ac03-9360-43f5-ab29-5cc2bca84e25 HTTP/1.1" 200 -
+2026-05-11 15:55:48,148 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:55:48] "GET /task/a0b8ac03-9360-43f5-ab29-5cc2bca84e25 HTTP/1.1" 200 -
+2026-05-11 15:55:51,157 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:55:51] "GET /task/a0b8ac03-9360-43f5-ab29-5cc2bca84e25 HTTP/1.1" 200 -
+2026-05-11 15:55:54,162 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:55:54] "GET /task/a0b8ac03-9360-43f5-ab29-5cc2bca84e25 HTTP/1.1" 200 -
+2026-05-11 15:55:57,162 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:55:57] "GET /task/a0b8ac03-9360-43f5-ab29-5cc2bca84e25 HTTP/1.1" 200 -
+2026-05-11 15:56:00,152 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:00] "GET /task/a0b8ac03-9360-43f5-ab29-5cc2bca84e25 HTTP/1.1" 200 -
+2026-05-11 15:56:03,158 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:03] "GET /task/a0b8ac03-9360-43f5-ab29-5cc2bca84e25 HTTP/1.1" 200 -
+2026-05-11 15:56:06,476 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:06] "GET /task/a0b8ac03-9360-43f5-ab29-5cc2bca84e25 HTTP/1.1" 200 -
+2026-05-11 15:56:09,151 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:09] "GET /task/a0b8ac03-9360-43f5-ab29-5cc2bca84e25 HTTP/1.1" 200 -
+2026-05-11 15:56:12,533 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:12] "GET /task/a0b8ac03-9360-43f5-ab29-5cc2bca84e25 HTTP/1.1" 200 -
+2026-05-11 15:56:15,540 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:15] "GET /task/a0b8ac03-9360-43f5-ab29-5cc2bca84e25 HTTP/1.1" 200 -
+2026-05-11 15:56:18,537 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:18] "GET /task/a0b8ac03-9360-43f5-ab29-5cc2bca84e25 HTTP/1.1" 200 -
+2026-05-11 15:56:21,548 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:21] "GET /task/a0b8ac03-9360-43f5-ab29-5cc2bca84e25 HTTP/1.1" 200 -
+2026-05-11 15:56:24,545 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:24] "GET /task/a0b8ac03-9360-43f5-ab29-5cc2bca84e25 HTTP/1.1" 200 -
+2026-05-11 15:56:27,548 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:27] "GET /task/a0b8ac03-9360-43f5-ab29-5cc2bca84e25 HTTP/1.1" 200 -
+2026-05-11 15:56:30,541 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:30] "GET /task/a0b8ac03-9360-43f5-ab29-5cc2bca84e25 HTTP/1.1" 200 -
+2026-05-11 15:56:32,026 [DEBUG] urllib3.connectionpool: https://image.pollinations.ai:443 "GET /prompt/a%20%20fairy%20deer%20is%20walking%20on%20the%20river%2C%20masterpiece%2C%20best%20quality%2C%20highly%20detailed%2C%20sharp%20focus%2C%208k?model=flux&width=1024&height=1024&seed=42&nologo=true HTTP/1.1" 200 None
+2026-05-11 15:56:32,164 [DEBUG] PIL.TiffImagePlugin: tag: Make (271) - type: string (2) Tag Location: 22 - Data Location: 126 - value: b'sana\x00'
+2026-05-11 15:56:32,165 [DEBUG] PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2026-05-11 15:56:32,166 [DEBUG] PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 46 - Data Location: 110 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2026-05-11 15:56:32,166 [DEBUG] PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 58 - Data Location: 118 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2026-05-11 15:56:32,167 [DEBUG] PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2026-05-11 15:56:32,167 [DEBUG] PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2026-05-11 15:56:32,168 [DEBUG] PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'\xb2\x02\x00\x00'
+2026-05-11 15:56:32,168 [DEBUG] PIL.TiffImagePlugin: tag: UserComment (37510) - type: undefined (7) Tag Location: 106 - Data Location: 132 - value: <table: 557 bytes>
+2026-05-11 15:56:32,169 [INFO] services: Image generated successfully.
+2026-05-11 15:56:33,548 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:33] "GET /task/a0b8ac03-9360-43f5-ab29-5cc2bca84e25 HTTP/1.1" 200 -
+2026-05-11 15:56:33,567 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:33] "GET /static/images/img_1_20260511_155632_172667.png HTTP/1.1" 200 -
+2026-05-11 15:56:53,618 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:53] "GET / HTTP/1.1" 200 -
+2026-05-11 15:56:53,638 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:53] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-11 15:56:53,650 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-11 15:56:53,654 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:53] "[36mGET /static/images/img_1_20260511_155632_172667.png HTTP/1.1[0m" 304 -
+2026-05-11 15:56:53,660 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:53] "[36mGET /static/images/img_1_20260511_155502_100464.png HTTP/1.1[0m" 304 -
+2026-05-11 15:56:53,676 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:53] "[36mGET /static/images/img_1_20260511_154042_905856.png HTTP/1.1[0m" 304 -
+2026-05-11 15:56:53,678 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:53] "[36mGET /static/images/img_1_20260511_155332_084482.png HTTP/1.1[0m" 304 -
+2026-05-11 15:56:53,708 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:53] "[36mGET /static/images/img_1_20260511_153913_165363.png HTTP/1.1[0m" 304 -
+2026-05-11 15:56:53,713 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:53] "[36mGET /static/images/img_1_20260507_091923_197935.png HTTP/1.1[0m" 304 -
+2026-05-11 15:56:53,726 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:53] "[36mGET /static/images/img_1_20260507_091753_140231.png HTTP/1.1[0m" 304 -
+2026-05-11 15:56:53,738 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:53] "[36mGET /static/images/img_1_20260507_091622_974687.png HTTP/1.1[0m" 304 -
+2026-05-11 15:56:53,743 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:56:53] "[36mGET /static/images/img_1_20260507_091453_185343.png HTTP/1.1[0m" 304 -
+2026-05-11 15:57:14,625 [INFO] __main__: Task ee6bbad3-f69c-4ec9-b642-3bf2fee3d2e9 started for user 1
+2026-05-11 15:57:14,643 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:57:14] "POST /generate HTTP/1.1" 200 -
+2026-05-11 15:57:14,663 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): image.pollinations.ai:443
+2026-05-11 15:57:17,672 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:57:17] "GET /task/ee6bbad3-f69c-4ec9-b642-3bf2fee3d2e9 HTTP/1.1" 200 -
+2026-05-11 15:57:20,663 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:57:20] "GET /task/ee6bbad3-f69c-4ec9-b642-3bf2fee3d2e9 HTTP/1.1" 200 -
+2026-05-11 15:57:23,671 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:57:23] "GET /task/ee6bbad3-f69c-4ec9-b642-3bf2fee3d2e9 HTTP/1.1" 200 -
+2026-05-11 15:57:26,665 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:57:26] "GET /task/ee6bbad3-f69c-4ec9-b642-3bf2fee3d2e9 HTTP/1.1" 200 -
+2026-05-11 15:57:29,678 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:57:29] "GET /task/ee6bbad3-f69c-4ec9-b642-3bf2fee3d2e9 HTTP/1.1" 200 -
+2026-05-11 15:57:32,670 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:57:32] "GET /task/ee6bbad3-f69c-4ec9-b642-3bf2fee3d2e9 HTTP/1.1" 200 -
+2026-05-11 15:57:35,674 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:57:35] "GET /task/ee6bbad3-f69c-4ec9-b642-3bf2fee3d2e9 HTTP/1.1" 200 -
+2026-05-11 15:57:38,668 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:57:38] "GET /task/ee6bbad3-f69c-4ec9-b642-3bf2fee3d2e9 HTTP/1.1" 200 -
+2026-05-11 15:57:41,665 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:57:41] "GET /task/ee6bbad3-f69c-4ec9-b642-3bf2fee3d2e9 HTTP/1.1" 200 -
+2026-05-11 15:57:44,661 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:57:44] "GET /task/ee6bbad3-f69c-4ec9-b642-3bf2fee3d2e9 HTTP/1.1" 200 -
+2026-05-11 15:57:47,689 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:57:47] "GET /task/ee6bbad3-f69c-4ec9-b642-3bf2fee3d2e9 HTTP/1.1" 200 -
+2026-05-11 15:57:50,662 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:57:50] "GET /task/ee6bbad3-f69c-4ec9-b642-3bf2fee3d2e9 HTTP/1.1" 200 -
+2026-05-11 15:57:53,673 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:57:53] "GET /task/ee6bbad3-f69c-4ec9-b642-3bf2fee3d2e9 HTTP/1.1" 200 -
+2026-05-11 15:57:56,665 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:57:56] "GET /task/ee6bbad3-f69c-4ec9-b642-3bf2fee3d2e9 HTTP/1.1" 200 -
+2026-05-11 15:57:59,668 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:57:59] "GET /task/ee6bbad3-f69c-4ec9-b642-3bf2fee3d2e9 HTTP/1.1" 200 -
+2026-05-11 15:58:01,885 [DEBUG] urllib3.connectionpool: https://image.pollinations.ai:443 "GET /prompt/a%20jaint%20man%20eating%20a%20rat%2C%20masterpiece%2C%20best%20quality%2C%20highly%20detailed%2C%20sharp%20focus%2C%208k?model=flux&width=1024&height=1024&seed=42&nologo=true HTTP/1.1" 200 None
+2026-05-11 15:58:01,991 [DEBUG] PIL.TiffImagePlugin: tag: Make (271) - type: string (2) Tag Location: 22 - Data Location: 126 - value: b'sana\x00'
+2026-05-11 15:58:01,993 [DEBUG] PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2026-05-11 15:58:01,994 [DEBUG] PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 46 - Data Location: 110 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2026-05-11 15:58:01,994 [DEBUG] PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 58 - Data Location: 118 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2026-05-11 15:58:01,995 [DEBUG] PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2026-05-11 15:58:01,996 [DEBUG] PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2026-05-11 15:58:02,007 [DEBUG] PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'\x98\x02\x00\x00'
+2026-05-11 15:58:02,008 [DEBUG] PIL.TiffImagePlugin: tag: UserComment (37510) - type: undefined (7) Tag Location: 106 - Data Location: 132 - value: <table: 531 bytes>
+2026-05-11 15:58:02,010 [INFO] services: Image generated successfully.
+2026-05-11 15:58:02,791 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:58:02] "GET /task/ee6bbad3-f69c-4ec9-b642-3bf2fee3d2e9 HTTP/1.1" 200 -
+2026-05-11 15:58:02,803 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 15:58:02] "GET /static/images/img_1_20260511_155802_021056.png HTTP/1.1" 200 -
+2026-05-11 16:36:14,573 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.77:5000
+2026-05-11 16:36:14,574 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-05-11 16:36:17,876 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 16:36:17] "GET / HTTP/1.1" 200 -
+2026-05-11 16:36:18,286 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 16:36:18] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-11 16:36:18,299 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 16:36:18] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-11 16:36:18,456 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 16:36:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 16:38:14,039 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 16:38:14] "GET / HTTP/1.1" 200 -
+2026-05-11 16:38:14,060 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 16:38:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-11 16:38:14,064 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 16:38:14] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-11 16:39:03,400 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 16:39:03] "GET / HTTP/1.1" 200 -
+2026-05-11 16:39:03,416 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 16:39:03] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-11 16:39:03,420 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 16:39:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -

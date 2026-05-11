@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}My Gallery{% endblock %}
+{% block content %}
+<div class="gallery-page">
+    <div class="gallery-header">
+        <h2>My Gallery</h2>
+        <div class="gallery-filters">
+            <a href="{{ url_for('gallery') }}"
+               class="filter-btn {% if filter=='all' %}active{% endif %}">All</a>
+            <a href="{{ url_for('gallery', filter='favorites') }}"
+               class="filter-btn {% if filter=='favorites' %}active{% endif %}">
+                <i class="fa-solid fa-heart"></i> Favorites
+            </a>
+        </div>
+    </div>
+
+    <div class="gallery-grid">
+        {% for img in images.items %}
+        <div class="gallery-card" id="card-{{ img.id }}">
+            <img src="{{ img.image_url }}" alt="{{ img.prompt }}" loading="lazy">
+            <div class="gallery-overlay">
+                <p>{{ img.prompt[:80] }}...</p>
+                <small>{{ img.created_at }}</small>
+                <div class="gallery-actions">
+                    <a href="{{ img.image_url }}" download="{{ img.filename }}"
+                       class="icon-btn" title="Download">
+                        <i class="fa-solid fa-download"></i>
+                    </a>
+                    <button onclick="toggleFav({{ img.id }})"
+                            class="icon-btn {% if img.is_favorite %}active{% endif %}"
+                            title="Favorite">
+                        <i class="fa-{% if img.is_favorite %}solid{% else %}regular{% endif %} fa-heart"></i>
+                    </button>
+                    <button onclick="deleteImg({{ img.id }})"
+                            class="icon-btn danger" title="Delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="empty-state">
+            <p>No images yet. <a href="{{ url_for('index') }}">Generate your first one!</a></p>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% if images.pages > 1 %}
+    <div class="pagination">
+        {% if images.has_prev %}
+            <a href="{{ url_for('gallery', page=images.prev_num, filter=filter) }}"
+               class="page-btn">← Prev</a>
+        {% endif %}
+        <span>Page {{ images.page }} of {{ images.pages }}</span>
+        {% if images.has_next %}
+            <a href="{{ url_for('gallery', page=images.next_num, filter=filter) }}"
+               class="page-btn">Next →</a>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function toggleFav(id) {
+    fetch(`/image/${id}/favorite`, { method: "POST" })
+        .then(r => r.json())
+        .then(data => {
+            showToast(data.is_favorite ? "Added to favorites!" : "Removed", "success");
+            setTimeout(() => location.reload(), 800);
+        });
+}
+function deleteImg(id) {
+    if (!confirm("Delete this image permanently?")) return;
+    fetch(`/image/${id}/delete`, { method: "POST" })
+        .then(r => r.json())
+        .then(() => {
+            document.getElementById(`card-${id}`).remove();
+            showToast("Image deleted.", "success");
+        });
+}
+</script>
+{% endblock %}
