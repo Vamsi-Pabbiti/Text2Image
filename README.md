@@ -1,44 +1,30 @@
-# VividAI — AI Image Generator
+# Text2Image — AI Image Generator
 
-A production-grade AI image generation web app built with Flask and Hugging Face.
+A production-grade AI image generation web app built with Python & Flask.
 
 ## Features
 - User authentication (Register / Login / Logout)
-- Async image generation using Python threading
-- Multiple AI models (SDXL, FLUX, DreamShaper)
+- Async image generation using threading
+- Multiple AI models (FLUX, DreamShaper, Turbo)
 - Personal gallery with favorites & delete
-- Rate limiting (10 images/hour per user)
-- Structured logging to file + console
-- Clean app factory pattern with Blueprints
+- Persistent storage with SQLite
+- Clean logging system
 
 ## Tech Stack
 - **Backend:** Python, Flask, SQLAlchemy, Flask-Login, Flask-Bcrypt
-- **AI:** Hugging Face Inference API
-- **Database:** SQLite (dev) / PostgreSQL (prod)
+- **AI:** Pollinations AI API
+- **Database:** SQLite
 - **Frontend:** HTML, CSS, Vanilla JS
 
 ## Setup
-
-### 1. Clone & install
-git clone https://github.com/yourname/vividai.git
-cd vividai
 pip install -r requirements.txt
-
-### 2. Configure environment
-cp .env.example .env
-# Add your HF_TOKEN and SECRET_KEY in .env
-
-### 3. Run
-python run.py
-
-### 4. Production
-gunicorn -w 4 -b 0.0.0.0:5000 "run:app"
+python app.py
 
 ## Project Structure
-app/
-  models.py        → Database models
-  routes/          → Blueprints (auth, main, gallery)
-  services/        → Business logic (image generation)
-  utils/           → Helper functions
-config.py          → Environment-based configuration
-run.py             → Entry point
+vividai/
+├── app.py          # Main Flask app
+├── models.py       # Database models
+├── services.py     # Image generation logic
+├── config.py       # Configuration
+├── static/         # CSS & JS
+└── templates/      # HTML templates
