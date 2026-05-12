@@ -578,3 +578,8 @@
 2026-05-12 14:52:54,575 [INFO] __main__: Task 11da9b7c-df18-4465-86b3-832b7244418e started for user 1
 2026-05-12 14:52:54,577 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:54] "POST /generate HTTP/1.1" 200 -
 2026-05-12 14:52:57,602 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:57] "GET /task/11da9b7c-df18-4465-86b3-832b7244418e HTTP/1.1" 200 -
+2026-05-12 15:01:44,642 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.77:5000
+2026-05-12 15:01:44,643 [INFO] werkzeug: [33mPress CTRL+C to quit[0m

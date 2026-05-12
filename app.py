@@ -13,7 +13,7 @@ from config import Config
 from models import db, bcrypt, User, GeneratedImage
 from services import MODELS, get_model_ids, generate_image, save_image
 
-# ── App setup ────────────────────────────────────────────────────
+# ── App Setup ────────────────────────────────────────────────────
 app = Flask(__name__)
 app.config.from_object(Config)
 
@@ -35,19 +35,19 @@ db.init_app(app)
 bcrypt.init_app(app)
 
 login_manager = LoginManager(app)
-login_manager.login_view         = "login"
-login_manager.login_message      = "Please log in to generate images."
+login_manager.login_view             = "login"
+login_manager.login_message          = "Please log in to generate images."
 login_manager.login_message_category = "error"
 
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
 
-# ── Task store (in-memory, thread-safe) ──────────────────────────
+# ── Task Store ───────────────────────────────────────────────────
 task_store = {}
 task_lock  = threading.Lock()
 
-# ── Background generation ────────────────────────────────────────
+# ── Background Generation ────────────────────────────────────────
 def run_generation(task_id, user_id, prompt, negative_prompt,
                    model_id, aspect, steps, guidance, seed):
     with app.app_context():
@@ -55,9 +55,11 @@ def run_generation(task_id, user_id, prompt, negative_prompt,
             with task_lock:
                 task_store[task_id] = {"status": "running"}
 
-            api_key = ""
-image = generate_image(api_key, prompt, negative_prompt,
-                       model_id, aspect, steps, guidance, seed)
+            api_key  = ""
+            image    = generate_image(
+                api_key, prompt, negative_prompt,
+                model_id, aspect, steps, guidance, seed
+            )
             filename = save_image(image, user_id, app.config["IMAGE_FOLDER"])
 
             record = GeneratedImage(
@@ -123,7 +125,7 @@ def register():
             db.session.add(user)
             db.session.commit()
             login_user(user)
-            flash("Welcome to Text2Image! 🎨", "success")
+            flash("Welcome to VividAI! 🎨", "success")
             return redirect(url_for("index"))
 
     return render_template("register.html")
@@ -163,7 +165,9 @@ def gallery():
     query       = GeneratedImage.query.filter_by(user_id=current_user.id)
     if filter_type == "favorites":
         query = query.filter_by(is_favorite=True)
-    images = query.order_by(GeneratedImage.created_at.desc()).paginate(page=page, per_page=20)
+    images = query.order_by(GeneratedImage.created_at.desc()).paginate(
+        page=page, per_page=20
+    )
     return render_template("gallery.html", images=images, filter=filter_type)
 
 
@@ -237,7 +241,8 @@ def task_status(task_id):
 @login_required
 def toggle_favorite(image_id):
     img = GeneratedImage.query.filter_by(
-        id=image_id, user_id=current_user.id).first_or_404()
+        id=image_id, user_id=current_user.id
+    ).first_or_404()
     img.is_favorite = not img.is_favorite
     db.session.commit()
     return jsonify({"is_favorite": img.is_favorite})
@@ -247,7 +252,8 @@ def toggle_favorite(image_id):
 @login_required
 def delete_image(image_id):
     img  = GeneratedImage.query.filter_by(
-        id=image_id, user_id=current_user.id).first_or_404()
+        id=image_id, user_id=current_user.id
+    ).first_or_404()
     path = os.path.join(app.config["IMAGE_FOLDER"], img.filename)
     if os.path.exists(path):
         os.remove(path)
@@ -256,7 +262,7 @@ def delete_image(image_id):
     return jsonify({"success": True})
 
 
-# ── Init DB & run ────────────────────────────────────────────────
+# ── Init DB & Run ────────────────────────────────────────────────
 with app.app_context():
     db.create_all()
 
