@@ -509,3 +509,72 @@
 2026-05-11 16:39:03,400 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 16:39:03] "GET / HTTP/1.1" 200 -
 2026-05-11 16:39:03,416 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 16:39:03] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
 2026-05-11 16:39:03,420 [INFO] werkzeug: 127.0.0.1 - - [11/May/2026 16:39:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-12 14:50:34,568 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.77:5000
+2026-05-12 14:50:34,570 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-05-12 14:50:37,558 [INFO] werkzeug: 127.0.0.1 - - [12/May/2026 14:50:37] "GET / HTTP/1.1" 200 -
+2026-05-12 14:50:37,753 [INFO] werkzeug: 127.0.0.1 - - [12/May/2026 14:50:37] "GET /static/css/main.css HTTP/1.1" 200 -
+2026-05-12 14:50:37,762 [INFO] werkzeug: 127.0.0.1 - - [12/May/2026 14:50:37] "GET /static/js/main.js HTTP/1.1" 200 -
+2026-05-12 14:50:38,272 [INFO] werkzeug: 127.0.0.1 - - [12/May/2026 14:50:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-12 14:50:44,674 [INFO] werkzeug: 127.0.0.1 - - [12/May/2026 14:50:44] "GET / HTTP/1.1" 200 -
+2026-05-12 14:50:44,809 [INFO] werkzeug: 127.0.0.1 - - [12/May/2026 14:50:44] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-12 14:50:44,810 [INFO] werkzeug: 127.0.0.1 - - [12/May/2026 14:50:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-12 14:51:12,716 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.77:5000
+2026-05-12 14:51:12,717 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-05-12 14:51:22,489 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:22] "GET / HTTP/1.1" 200 -
+2026-05-12 14:51:22,902 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:22] "GET /static/js/main.js HTTP/1.1" 200 -
+2026-05-12 14:51:22,905 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:22] "GET /static/css/main.css HTTP/1.1" 200 -
+2026-05-12 14:51:23,195 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-12 14:51:34,891 [INFO] werkzeug: 127.0.0.1 - - [12/May/2026 14:51:34] "GET / HTTP/1.1" 200 -
+2026-05-12 14:51:35,125 [INFO] werkzeug: 127.0.0.1 - - [12/May/2026 14:51:35] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-12 14:51:35,150 [INFO] werkzeug: 127.0.0.1 - - [12/May/2026 14:51:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-12 14:51:42,903 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:42] "GET /register HTTP/1.1" 200 -
+2026-05-12 14:51:42,920 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:42] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-12 14:51:42,921 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-12 14:51:45,055 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:45] "GET /login HTTP/1.1" 200 -
+2026-05-12 14:51:45,069 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:45] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-12 14:51:45,072 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-12 14:51:54,532 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:54] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-05-12 14:51:54,550 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:54] "GET / HTTP/1.1" 200 -
+2026-05-12 14:51:54,578 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:54] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-12 14:51:54,579 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:54] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-12 14:51:54,692 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:54] "GET /static/images/img_1_20260511_154042_905856.png HTTP/1.1" 200 -
+2026-05-12 14:51:54,693 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:54] "GET /static/images/img_1_20260511_155632_172667.png HTTP/1.1" 200 -
+2026-05-12 14:51:54,694 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:54] "GET /static/images/img_1_20260511_155332_084482.png HTTP/1.1" 200 -
+2026-05-12 14:51:54,694 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:54] "GET /static/images/img_1_20260511_155502_100464.png HTTP/1.1" 200 -
+2026-05-12 14:51:54,696 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:54] "GET /static/images/img_1_20260511_153913_165363.png HTTP/1.1" 200 -
+2026-05-12 14:51:54,696 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:54] "GET /static/images/img_1_20260511_155802_021056.png HTTP/1.1" 200 -
+2026-05-12 14:51:54,771 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:54] "GET /static/images/img_1_20260507_091923_197935.png HTTP/1.1" 200 -
+2026-05-12 14:51:54,776 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:54] "GET /static/images/img_1_20260507_091753_140231.png HTTP/1.1" 200 -
+2026-05-12 14:51:54,811 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:54] "GET /static/images/img_1_20260507_091622_974687.png HTTP/1.1" 200 -
+2026-05-12 14:51:54,817 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:51:54] "GET /static/images/img_1_20260507_091453_185343.png HTTP/1.1" 200 -
+2026-05-12 14:52:20,251 [ERROR] __main__: Task f7f9335e-b076-4003-b6e7-93b6c7087b30 failed: 'HF_TOKEN'
+2026-05-12 14:52:20,251 [INFO] __main__: Task f7f9335e-b076-4003-b6e7-93b6c7087b30 started for user 1
+2026-05-12 14:52:20,253 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:20] "POST /generate HTTP/1.1" 200 -
+2026-05-12 14:52:23,266 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:23] "GET /task/f7f9335e-b076-4003-b6e7-93b6c7087b30 HTTP/1.1" 200 -
+2026-05-12 14:52:31,321 [ERROR] __main__: Task 116dc012-31b2-45c7-b8d9-41d8292eda4b failed: 'HF_TOKEN'
+2026-05-12 14:52:31,322 [INFO] __main__: Task 116dc012-31b2-45c7-b8d9-41d8292eda4b started for user 1
+2026-05-12 14:52:31,324 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:31] "POST /generate HTTP/1.1" 200 -
+2026-05-12 14:52:34,341 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:34] "GET /task/116dc012-31b2-45c7-b8d9-41d8292eda4b HTTP/1.1" 200 -
+2026-05-12 14:52:44,602 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:44] "GET / HTTP/1.1" 200 -
+2026-05-12 14:52:44,630 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:44] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-05-12 14:52:44,633 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-05-12 14:52:44,641 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:44] "[36mGET /static/images/img_1_20260511_155802_021056.png HTTP/1.1[0m" 304 -
+2026-05-12 14:52:44,649 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:44] "[36mGET /static/images/img_1_20260511_155632_172667.png HTTP/1.1[0m" 304 -
+2026-05-12 14:52:44,653 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:44] "[36mGET /static/images/img_1_20260511_155502_100464.png HTTP/1.1[0m" 304 -
+2026-05-12 14:52:44,660 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:44] "[36mGET /static/images/img_1_20260511_155332_084482.png HTTP/1.1[0m" 304 -
+2026-05-12 14:52:44,683 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:44] "[36mGET /static/images/img_1_20260511_153913_165363.png HTTP/1.1[0m" 304 -
+2026-05-12 14:52:44,697 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:44] "[36mGET /static/images/img_1_20260511_154042_905856.png HTTP/1.1[0m" 304 -
+2026-05-12 14:52:44,705 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:44] "[36mGET /static/images/img_1_20260507_091923_197935.png HTTP/1.1[0m" 304 -
+2026-05-12 14:52:44,715 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:44] "[36mGET /static/images/img_1_20260507_091753_140231.png HTTP/1.1[0m" 304 -
+2026-05-12 14:52:44,720 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:44] "[36mGET /static/images/img_1_20260507_091622_974687.png HTTP/1.1[0m" 304 -
+2026-05-12 14:52:44,730 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:44] "[36mGET /static/images/img_1_20260507_091453_185343.png HTTP/1.1[0m" 304 -
+2026-05-12 14:52:54,574 [ERROR] __main__: Task 11da9b7c-df18-4465-86b3-832b7244418e failed: 'HF_TOKEN'
+2026-05-12 14:52:54,575 [INFO] __main__: Task 11da9b7c-df18-4465-86b3-832b7244418e started for user 1
+2026-05-12 14:52:54,577 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:54] "POST /generate HTTP/1.1" 200 -
+2026-05-12 14:52:57,602 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 14:52:57] "GET /task/11da9b7c-df18-4465-86b3-832b7244418e HTTP/1.1" 200 -

@@ -55,9 +55,9 @@ def run_generation(task_id, user_id, prompt, negative_prompt,
             with task_lock:
                 task_store[task_id] = {"status": "running"}
 
-            hf_token = app.config["HF_TOKEN"]
-            image    = generate_image(hf_token, prompt, negative_prompt,
-                                      model_id, aspect, steps, guidance, seed)
+            api_key = ""
+image = generate_image(api_key, prompt, negative_prompt,
+                       model_id, aspect, steps, guidance, seed)
             filename = save_image(image, user_id, app.config["IMAGE_FOLDER"])
 
             record = GeneratedImage(
