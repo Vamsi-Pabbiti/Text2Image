@@ -51,15 +51,50 @@ def generate_image(api_key, prompt, negative_prompt, model_id, aspect, steps, gu
     logger.info(f"Pollinations → model={model_id}, prompt={prompt[:60]}")
 
     try:
-        response = requests.get(
-            url,
-            headers={"Authorization": f"Bearer {api_key}"},
-            timeout=120,
-        )
+        # If an API key is provided, call the new gen endpoint with Authorization.
+        if api_key:
+            response = requests.get(
+                url,
+                headers={"Authorization": f"Bearer {api_key}"},
+                timeout=120,
+            )
+        else:
+            # No API key: try the legacy public image endpoint which historically
+            # allowed prompt-based generation without an API key.
+            legacy_url = (
+                f"https://image.pollinations.ai/prompt/{quote(enhanced)}"
+                f"?model={model_id}&width={w}&height={h}&seed={seed_val}&nologo=true&enhance=false"
+            )
+            logger.warning("No POLLINATIONS_API_KEY set — falling back to legacy public endpoint.")
+            response = requests.get(legacy_url, timeout=120)
     except requests.exceptions.Timeout:
         raise RuntimeError("Request timed out. Please try again.")
     except requests.exceptions.ConnectionError:
         raise RuntimeError("No internet connection.")
+
+    # If we received a 401/402 from the gen endpoint while using an API key,
+    # attempt the legacy endpoint as a fallback before failing (helps for demos).
+    if response.status_code in (401, 402) and api_key:
+        detail = response.text[:500]
+        logger.warning(f"Gen endpoint returned {response.status_code}: {detail}. Trying legacy endpoint.")
+        legacy_url = (
+            f"https://image.pollinations.ai/prompt/{quote(enhanced)}"
+            f"?model={model_id}&width={w}&height={h}&seed={seed_val}&nologo=true&enhance=false"
+        )
+        try:
+            response = requests.get(legacy_url, timeout=120)
+        except requests.exceptions.RequestException:
+            # If fallback fails, present the original error to the caller
+            if response.status_code == 401:
+                raise RuntimeError(
+                    "Generation failed (HTTP 401: Unauthorized). Your POLLINATIONS_API_KEY is "
+                    "missing or invalid. Get a key at https://enter.pollinations.ai."
+                )
+            if response.status_code == 402:
+                raise RuntimeError(
+                    "Generation failed (HTTP 402: Payment Required). Your Pollen balance is "
+                    f"exhausted — check https://enter.pollinations.ai/dashboard. Response: {detail}"
+                )
 
     if response.status_code == 401:
         raise RuntimeError(

@@ -761,3 +761,34 @@
 2026-06-14 16:16:11,601 [INFO] services: Image generated successfully.
 2026-06-14 16:16:13,094 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:16:13] "GET /task/63a3b844-5222-46a3-ba3d-ffa5a806d22b HTTP/1.1" 200 -
 2026-06-14 16:16:13,143 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:16:13] "GET /static/images/img_2_20260614_161611_609087.png HTTP/1.1" 200 -
+2026-06-14 16:42:18,514 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.77:5000
+2026-06-14 16:42:18,516 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-14 16:42:28,127 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:42:28] "GET / HTTP/1.1" 200 -
+2026-06-14 16:42:28,519 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:42:28] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-06-14 16:42:28,531 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:42:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-14 16:42:28,751 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:42:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-14 16:42:31,499 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:42:31] "GET /register HTTP/1.1" 200 -
+2026-06-14 16:42:31,549 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:42:31] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-06-14 16:42:31,551 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:42:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-14 16:42:33,356 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:42:33] "GET /login HTTP/1.1" 200 -
+2026-06-14 16:42:33,390 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:42:33] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-06-14 16:42:33,393 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:42:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-14 16:42:41,820 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:42:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-06-14 16:42:41,867 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:42:41] "GET / HTTP/1.1" 200 -
+2026-06-14 16:42:41,906 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:42:41] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-06-14 16:42:41,910 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:42:41] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-14 16:42:41,976 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:42:41] "[36mGET /static/images/img_2_20260614_161611_609087.png HTTP/1.1[0m" 304 -
+2026-06-14 16:42:41,979 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:42:41] "[36mGET /static/images/img_2_20260512_151833_148339.png HTTP/1.1[0m" 304 -
+2026-06-14 16:42:55,510 [INFO] __main__: Task 2fc38c82-42ad-4a8a-b52a-b0b0b3426fa9 started for user 2
+2026-06-14 16:42:55,529 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:42:55] "POST /generate HTTP/1.1" 200 -
+2026-06-14 16:42:55,544 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): gen.pollinations.ai:443
+2026-06-14 16:42:58,550 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:42:58] "GET /task/2fc38c82-42ad-4a8a-b52a-b0b0b3426fa9 HTTP/1.1" 200 -
+2026-06-14 16:42:59,882 [DEBUG] urllib3.connectionpool: https://gen.pollinations.ai:443 "GET /image/monkey%2C%20masterpiece%2C%20best%20quality%2C%20highly%20detailed%2C%20sharp%20focus%2C%208k?model=flux&width=1024&height=1024&seed=42&nologo=true HTTP/1.1" 200 212465
+2026-06-14 16:43:00,070 [DEBUG] PIL.TiffImagePlugin: tag: Make (271) - type: string (2) Tag Location: 22 - Data Location: 38 - value: b'flux\x00'
+2026-06-14 16:43:00,071 [DEBUG] PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00+'
+2026-06-14 16:43:00,072 [INFO] services: Image generated successfully.
+2026-06-14 16:43:01,556 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:43:01] "GET /task/2fc38c82-42ad-4a8a-b52a-b0b0b3426fa9 HTTP/1.1" 200 -
+2026-06-14 16:43:01,620 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:43:01] "GET /static/images/img_2_20260614_164300_080676.png HTTP/1.1" 200 -
