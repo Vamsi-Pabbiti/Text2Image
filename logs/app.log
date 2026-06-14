@@ -731,3 +731,33 @@
 2026-05-12 15:25:04,859 [INFO] services: Image generated successfully.
 2026-05-12 15:25:07,510 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 15:25:07] "GET /task/fa027996-b9e2-479b-bdde-32f9614a63ba HTTP/1.1" 200 -
 2026-05-12 15:25:07,545 [INFO] werkzeug: 192.168.29.77 - - [12/May/2026 15:25:07] "GET /static/images/img_3_20260512_152504_861320.png HTTP/1.1" 200 -
+2026-06-14 16:15:20,637 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.77:5000
+2026-06-14 16:15:20,638 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-14 16:15:38,695 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:15:38] "GET / HTTP/1.1" 200 -
+2026-06-14 16:15:39,153 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:15:39] "GET /static/css/main.css HTTP/1.1" 200 -
+2026-06-14 16:15:39,208 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:15:39] "GET /static/js/main.js HTTP/1.1" 200 -
+2026-06-14 16:15:39,486 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:15:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-14 16:15:43,939 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:15:43] "GET /register HTTP/1.1" 200 -
+2026-06-14 16:15:43,965 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:15:43] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-06-14 16:15:43,968 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:15:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-14 16:15:45,670 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:15:45] "GET /login HTTP/1.1" 200 -
+2026-06-14 16:15:45,690 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:15:45] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-06-14 16:15:45,691 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:15:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-14 16:15:54,953 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:15:54] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-06-14 16:15:54,997 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:15:54] "GET / HTTP/1.1" 200 -
+2026-06-14 16:15:55,069 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:15:55] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-06-14 16:15:55,071 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:15:55] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-14 16:15:55,144 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:15:55] "GET /static/images/img_2_20260512_151833_148339.png HTTP/1.1" 200 -
+2026-06-14 16:16:06,861 [INFO] __main__: Task 63a3b844-5222-46a3-ba3d-ffa5a806d22b started for user 2
+2026-06-14 16:16:07,064 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:16:07] "POST /generate HTTP/1.1" 200 -
+2026-06-14 16:16:07,085 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): gen.pollinations.ai:443
+2026-06-14 16:16:10,084 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:16:10] "GET /task/63a3b844-5222-46a3-ba3d-ffa5a806d22b HTTP/1.1" 200 -
+2026-06-14 16:16:11,333 [DEBUG] urllib3.connectionpool: https://gen.pollinations.ai:443 "GET /image/a%20golden%20goat%2C%20masterpiece%2C%20best%20quality%2C%20highly%20detailed%2C%20sharp%20focus%2C%208k?model=flux&width=1024&height=1024&seed=42&nologo=true HTTP/1.1" 200 175265
+2026-06-14 16:16:11,599 [DEBUG] PIL.TiffImagePlugin: tag: Make (271) - type: string (2) Tag Location: 22 - Data Location: 38 - value: b'flux\x00'
+2026-06-14 16:16:11,600 [DEBUG] PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00+'
+2026-06-14 16:16:11,601 [INFO] services: Image generated successfully.
+2026-06-14 16:16:13,094 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:16:13] "GET /task/63a3b844-5222-46a3-ba3d-ffa5a806d22b HTTP/1.1" 200 -
+2026-06-14 16:16:13,143 [INFO] werkzeug: 192.168.29.77 - - [14/Jun/2026 16:16:13] "GET /static/images/img_2_20260614_161611_609087.png HTTP/1.1" 200 -
