@@ -50,8 +50,16 @@ def generate_image(api_key, prompt, negative_prompt, model_id, aspect, steps, gu
     except requests.exceptions.ConnectionError:
         raise RuntimeError("No internet connection.")
 
+    if response.status_code == 402:
+        detail = response.text[:500]
+        raise RuntimeError(
+            "Generation failed (HTTP 402: Payment Required). Check your provider account or API key. "
+            f"Response: {detail}"
+        )
+
     if response.status_code != 200:
-        raise RuntimeError(f"Generation failed (HTTP {response.status_code}). Try again.")
+        detail = response.text[:500]
+        raise RuntimeError(f"Generation failed (HTTP {response.status_code}). Response: {detail}")
 
     if "image" not in response.headers.get("Content-Type", ""):
         raise RuntimeError("Unexpected response. Try a different model.")

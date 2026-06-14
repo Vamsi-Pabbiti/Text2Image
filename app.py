@@ -54,8 +54,7 @@ def run_generation(task_id, user_id, prompt, negative_prompt,
         try:
             with task_lock:
                 task_store[task_id] = {"status": "running"}
-
-            api_key  = ""
+            api_key  = os.getenv("POLLINATIONS_API_KEY", "")
             image    = generate_image(
                 api_key, prompt, negative_prompt,
                 model_id, aspect, steps, guidance, seed
